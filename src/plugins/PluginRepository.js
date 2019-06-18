@@ -3,6 +3,7 @@ import EOS from './defaults/eos';
 import ENU from './defaults/enu';
 import ETH from './defaults/eth';
 import FIBOS from './defaults/fibos';
+import FIBOSTESTNET from './defaults/fibostestnet';
 
 /***
  * Setting up for plugin based generators,
@@ -17,10 +18,11 @@ class PluginRepositorySingleton {
     }
 
     loadPlugins(){
-        this.plugins.push(new EOS());
-        this.plugins.push(new ENU());
-        this.plugins.push(new ETH());
         this.plugins.push(new FIBOS());
+        this.plugins.push(new FIBOSTESTNET());
+        this.plugins.push(new ETH());
+        this.plugins.push(new EOS());
+        // this.plugins.push(new ENU());
     }
 
     signatureProviders(){

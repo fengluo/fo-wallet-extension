@@ -3,7 +3,7 @@ import {Blockchains} from '../../models/Blockchains'
 
 export const m5_0_4 = async scatter => {
     const endorsedNetworks = [
-        await PluginRepository.plugin(Blockchains.ENU).getEndorsedNetwork(),
+        await PluginRepository.plugin(Blockchains.FIBOS).getEndorsedNetwork(),
         await PluginRepository.plugin(Blockchains.ETH).getEndorsedNetwork()
     ];
 

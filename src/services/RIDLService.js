@@ -7,7 +7,7 @@ import {Blockchains} from '../models/Blockchains'
 const enabled = false;
 
 setTimeout(() => {
-    PluginRepository.plugin(Blockchains.ENU)
+    PluginRepository.plugin(Blockchains.FIBOS)
         .getEndorsedNetwork()
         .then(network => ridl.setNetwork(network));
 }, 50);

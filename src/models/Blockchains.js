@@ -1,10 +1,10 @@
 
 export const Blockchains = {
-    EOS:'eos',
-    ENU:'enu',
     FIBOS:'fibos',
-    ETH:'eth'
+    ETH:'eth',
+    EOS:'eos',
+    ENU:'enu'
 };
 
 export const BlockchainsArray =
-    Object.keys(Blockchains).map(key => ({key, value:Blockchains[key]}));
+    Object.keys(Blockchains).map(key => (key !== 'ENU' && {key, value:Blockchains[key]})).filter(Boolean);
